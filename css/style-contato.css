@@ -1,0 +1,86 @@
+
+
+/*MAIN*/
+
+.caixa-contato {
+    
+    text-align: center;
+    position: relative;
+    top:150px;
+    font-family: 'Comfortaa', cursive;
+}
+.caixa-contato h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+.caixa-contato p {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+.conteiner {
+    display: flex;
+    justify-content: center;
+    
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+}
+main div a i {
+    font-size: 120px;
+    margin: 10px 20px 0 20px;
+    transform: scale(0.9);
+    transition: 1s ease;
+}
+
+main div a i:hover {
+
+    transform: scale(1);
+}
+main div a {
+    opacity: 0.9;
+    
+}
+main div a:hover{
+    opacity: 1;
+
+}
+
+main div a.telefone {
+    color:#247AFD;
+}
+
+
+main div a.whatsapp {
+    color:#2DFE54;
+    
+}
+
+main div a.email i{
+    color: #FE2C54;
+}
+
+.retorno {
+    margin: 20px;
+    text-align: center;
+   
+}
+
+@media(max-width:700px) {
+    
+    .caixa-contato h2 {
+        font-size: 1.3rem;
+    }
+    .caixa-contato p {
+        font-size: 1rem;
+    }
+    .app {
+       
+        margin: 0 0px;
+    }
+    main div a i {
+        font-size: 100px;
+        
+    }
+}

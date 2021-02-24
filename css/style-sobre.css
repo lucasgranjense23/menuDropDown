@@ -1,0 +1,33 @@
+
+/*SOBRE*/
+
+/*MAIN*/
+main {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    font-family: 'Comfortaa', cursive;
+    margin: 10px 10px;
+}
+main section h2 {
+    color: #137E6D;
+}
+
+main section .olive{
+    font-size: 18px;
+    font-family: 'Pacifico', cursive;
+}
+main section p {
+    margin-top: 15px;
+}
+main section p strong {
+    color: #137E6D;
+   
+}
+main section h3 {
+    color:#137E6D;
+}
+main section ul li {
+    margin-left: 20px;
+}
+

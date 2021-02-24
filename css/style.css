@@ -1,0 +1,239 @@
+/*RESET*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+   
+    width: 100%;
+    height: 100vh;
+   
+}
+/*HEADER*/
+header {
+    width: 100%;
+    background-color: #137E6D;
+    padding: 10px 20px;
+    position: fixed; /*posicao fixed para que a medida que a pagina role ele nao se mova*/
+    top: 0; /* garantir que o header sempre fique colado no topo*/
+    z-index: 999; /*que nada sobre ponha sobre o header*/
+}
+.navbar {
+    max-width: 1400px;/*maximo da div */
+    margin: 0 auto; /*sempre centralizada*/
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 180px;
+    height: 80px;
+    
+}
+
+.hamburguer {
+    width: 40px;
+    height: 30px;
+
+    background-color:transparent;
+    border-radius: 10%;
+    border:0;
+    
+    position: relative;
+    cursor: pointer;
+
+    display: none;
+    transition: 2s ease;
+    
+}
+
+.hamburguer:after{
+    content: "";
+
+    position: absolute;
+    top: 30%;
+    left: 15%;
+
+    width: 70%;
+    height: 10%;
+    border-radius: 6px;
+
+    background-color: #fff;
+    transition: 1s ease;
+}
+
+.hamburguer::before{
+    content: "";
+
+    position: absolute;
+    top: 60%;
+    left: 45%;
+
+    width: 40%;
+    height: 10%;
+    border-radius: 6px;
+
+    background-color: #fff;
+    transition: 1s ease;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin-left: 10px;
+    
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Comfortaa', cursive;
+    transition: .5s ease;
+    
+}
+.menu li a:hover {
+    color: #FFE5AD;
+}
+
+@media(max-width:700px) {
+    .logo {
+        width: 220px;
+        height: 100px;
+        margin: 0 50px  0 70px;
+    }
+    .hamburguer{
+        display: block;
+        z-index: 999;
+        
+    }
+    .menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color:#FFE5AD;
+        width: 100%;
+        max-width: 100px;
+        padding: 180px 20px;
+        flex-direction: column;
+    }
+    .menu li a {
+        color:#677A04;
+    }
+    .menu li a:hover {
+        color: #fff;
+    }
+    .menu.active {
+        right: -100%;
+        
+    }
+    #hamburguer:checked ~ label .hamburguer:after {
+        transform: rotate(230deg);
+        width: 70%;
+        height: 10%;
+        top:45%;
+        left: 15%;
+        
+    }
+    #hamburguer:checked ~ label .hamburguer::before {
+        transform: rotate(-230deg);
+        width: 70%;
+        height: 10%;
+        top:45%;
+        left: 15%;
+        
+    }
+}
+
+
+@media(max-width:500px) {
+    .img {
+        text-align: center;
+    }
+    .logo {
+        display: flex;
+        width: 160px;
+        height: 60px;
+        
+    }
+
+    .hamburguer{
+        display: block;
+        z-index: 999;
+      
+    }
+   
+    .menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color:#FFE5AD;
+        width: 100%;
+        max-width: 130px;
+        padding: 80px 20px;
+        flex-direction: column;
+        
+    }
+    .menu li a {
+        color:#677A04;
+    }
+    .menu li a:hover {
+        color: #fff;
+    }
+    
+    .menu.active {
+        right: -100%;
+       
+    }
+    #hamburguer:checked ~ label .hamburguer:after {
+        transform: rotate(230deg);
+        width: 60%;
+        height: 10%;
+        top:45%;
+        left: 15%;
+        background-color: #677A04;
+        
+    
+    }
+    #hamburguer:checked ~ label .hamburguer::before {
+        transform: rotate(-230deg);
+        width: 60%;
+        height: 10%;
+        top:45%;
+        left: 15%;
+        background-color: #677A04;
+        
+        
+    }
+}
+/*FOOTER*/
+footer {
+    background-color:#137E6D;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    
+}
+
+footer img { 
+    width: 30px;
+}
+
+footer p {
+    color: #fff;
+}
+
